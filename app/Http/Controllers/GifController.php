@@ -25,6 +25,14 @@ class GifController extends Controller
         return response()->json($response);
     }
 
+    public function show(string $id)
+    {
+        /** @var GifService $service */
+        $service = App::make(GifService::class);
+        $response = $service->get($id);
+        return response()->json($response);
+    }
+
     public function save(User $user, SaveGifRequest $request)
     {
         return DB::transaction(function () use ($user, $request) {

@@ -11,6 +11,9 @@ Route::middleware('auth:sanctum')
     ->name('api.')
     ->group(function () {
         Route::get('/gif/search', [GifController::class, 'search'])->name('gif.search');
+        Route::get('/gif/{id}', [GifController::class, 'show'])
+            ->name('gif.show')
+            ->where('id', '[a-zA-Z0-9]+');
         Route::put('/user/{user}/gif', [GifController::class, 'save'])->name('gif.save');
     });
 

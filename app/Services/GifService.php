@@ -22,12 +22,18 @@ class GifService
 
     public function search(string $query, int $limit = 20, int $offset = 20)
     {
-        $response = $this->getClient()->get('gifs/search', [
+        return $this->getClient()->get('gifs/search', [
             'api_key' => $this->key,
             'q' => $query,
             'limit' => $limit,
             'offset' => $offset,
         ])->json();
-        return $response;
+    }
+
+    public function get(string $id)
+    {
+        return $this->getClient()->get('gifs/'.$id, [
+            'api_key' => $this->key,
+        ])->json();
     }
 }
