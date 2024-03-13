@@ -31,4 +31,7 @@ return [
         ],
     ],
 
+    'giphy' => [
+        'key' => env('GIPHY_KEY'),
+    ],
 ];
