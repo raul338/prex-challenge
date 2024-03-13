@@ -19,8 +19,8 @@ class GifController extends Controller
         $service = App::make(GifService::class);
         $response = $service->search(
             $request->validated('query'),
-            $request->validated('limit'),
-            $request->validated('offset')
+            $request->validated('limit') ?: 20,
+            $request->validated('offset') ?: 20
         );
         return response()->json($response);
     }
