@@ -1,5 +1,7 @@
 # Prex Challenge
 
+[![phpunit](https://github.com/raul338/prex-challenge/actions/workflows/php.yml/badge.svg)](https://github.com/raul338/prex-challenge/actions/workflows/php.yml)
+
 ### Setup
 
 1. Clonar el proyecto
