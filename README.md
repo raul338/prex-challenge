@@ -21,3 +21,7 @@ vendor/bin/sail up -d
 ```
 2. Ejecutar tests unitarios con `sail test --coverage`
 3. Utilizar [coleccion de Postman](./documentation/prex-hallenge.postman_collection.json) y [environment](./documentation/prex-challenge.postman_environment.json) para probar los endpoints
+
+### Documentacion
+
+Ver en [Documentacion](./documentation/documentation.md)
