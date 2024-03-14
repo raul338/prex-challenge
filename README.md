@@ -23,6 +23,7 @@ vendor/bin/sail shell
 # adentro del container
 php artisan key:generate
 php artisan migrate --seed
+exit
 ```
 2. Ejecutar tests unitarios con `sail test --coverage`
 3. Utilizar [coleccion de Postman](./documentation/prex-hallenge.postman_collection.json) y [environment](./documentation/prex-challenge.postman_environment.json) para probar los endpoints. Revisar puerto del environment en caso de cambiarlo.
