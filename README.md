@@ -27,6 +27,7 @@ php artisan migrate --seed
 2. Ejecutar tests unitarios con `sail test --coverage`
 3. Utilizar [coleccion de Postman](./documentation/prex-hallenge.postman_collection.json) y [environment](./documentation/prex-challenge.postman_environment.json) para probar los endpoints. Revisar puerto del environment en caso de cambiarlo.
 4. Los logs de los servicios se guardan en `storage/logs/laravel.log`, en produccion esto debe ser guardado por un servicio externo (CloudWatc, DataDog, Grafana Loki, etc) siguiendo los principios de [12th factor app](https://12factor.net/es/)
+5. Finalizar y limpiar todo con `vendor/bin/sail down -v`
 
 ### Documentacion
 
