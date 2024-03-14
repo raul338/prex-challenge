@@ -40,4 +40,19 @@ class GifControllerTest extends TestCase
 
         Http::assertSentCount(1);
     }
+
+    public function testSaveGif(): void
+    {
+        $user = User::factory()->create();
+        $victim = User::factory()->create();
+
+        $data = [
+            'gif_id' => fake()->word(),
+            'alias' => fake()->name(),
+        ];
+        $this->actingAs($user)
+            ->putJson(route('api.gif.save', ['user' => $victim->id]), $data)
+            ->assertSuccessful();
+        $this->assertDatabaseCount('gifs', 1);
+    }
 }
