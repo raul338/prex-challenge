@@ -1,0 +1,13 @@
+sequenceDiagram
+    actor User
+    User->>Prex: Authenticate
+    User->>+Prex: Search GIFs
+    Prex-->>+Giphy: Search GIFs
+    Giphy-->>-Prex: Response
+    Prex->>-User: Response
+    User->>+Prex: Get GIF
+    Prex-->>+Giphy: Get GIF
+    Giphy-->>-Prex: Response
+    Prex->>-User: Response
+    User->>+Prex: Save Gif for User
+    Prex->>-User: Response OK
