@@ -2,13 +2,17 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\GifController;
+use App\Http\Middleware\LogServicesMiddleware;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::post('/login', [AuthController::class, 'login'])->name('api.login');
+Route::post('/login', [AuthController::class, 'login'])
+    ->middleware(LogServicesMiddleware::class)
+    ->name('api.login');
 
 Route::middleware('auth:sanctum')
     ->name('api.')
+    ->middleware(LogServicesMiddleware::class)
     ->group(function () {
         Route::get('/gif/search', [GifController::class, 'search'])->name('gif.search');
         Route::get('/gif/{id}', [GifController::class, 'show'])
@@ -17,6 +21,3 @@ Route::middleware('auth:sanctum')
         Route::put('/user/{user}/gif', [GifController::class, 'save'])->name('gif.save');
     });
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:sanctum');
