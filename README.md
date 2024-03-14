@@ -1,6 +1,6 @@
 # Prex Challenge
 
-[![phpunit](https://github.com/raul338/prex-challenge/actions/workflows/php.yml/badge.svg)](https://github.com/raul338/prex-challenge/actions/workflows/php.yml)
+[![phpunit](https://github.com/raul338/prex-challenge/actions/workflows/php.yml/badge.svg?branch=main)](https://github.com/raul338/prex-challenge/actions/workflows/php.yml)
 
 ### Setup
 
